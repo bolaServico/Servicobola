@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onBookingClick, isDarkMode }) => {
   return (
-    <section className="pt-32 pb-16 relative overflow-hidden bg-black">
+    <section className="pt-32 pb-12 relative overflow-hidden bg-black">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/10 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ onBookingClick, isDarkMode }) => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
             <div className="text-center">
               <div className="text-3xl font-bold mb-2 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>60s</div>
               <div className="text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>Lead Response Time</div>

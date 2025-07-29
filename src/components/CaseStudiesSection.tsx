@@ -46,9 +46,9 @@ const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ isDarkMode }) =
   ];
 
   return (
-    <section className="py-16 bg-black">
+    <section className="py-12 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
             Proven ROI from Industry Leaders
           </h2>

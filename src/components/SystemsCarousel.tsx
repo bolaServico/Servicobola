@@ -137,16 +137,25 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
   const currentSystem = systems[currentSlide];
 
   return (
-    <section className="py-16 bg-black relative overflow-hidden">
+    <section className="py-12 bg-black relative overflow-hidden">
       {/* Background gradient animation */}
       <div className="absolute inset-0 opacity-10">
         <div className={`absolute inset-0 bg-gradient-to-br ${currentSystem.color} transition-all duration-1000 ease-in-out`} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Main Headings */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
+            Complete AI Growth Infrastructure Systems
+          </h2>
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
+            Three integrated systems working together to transform your practice
+          </p>
+        </div>
 
-        {/* Navigation Menu */}
-        <div className="text-center mb-12">
+        {/* System Navigation Menu */}
+        <div className="text-center mb-8">
           <nav className="inline-flex items-center space-x-1 bg-white/10 backdrop-blur-sm rounded-full p-2">
             {menuItems.map((system) => (
               <button
