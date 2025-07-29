@@ -1,31 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import './styles/theme.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Custom Button Styles */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-base font-medium rounded-lg transition-all duration-300 border;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #000000;
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+  }
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  .btn-primary:hover {
+    background-color: #E8E8E7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+  .btn-primary:focus {
+    outline: none;
+    ring: 2px;
+    ring-offset: 2px;
+    ring-color: #d1d5db;
+  }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+  .btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 
-#root {
-  width: 100%;
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-base font-medium rounded-lg transition-all duration-300 border;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #000000;
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: #ffffff;
+    border-color: #d1d5db;
+  }
+
+  .btn-secondary:hover {
+    background-color: #E8E8E7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-secondary:focus {
+    outline: none;
+    ring: 2px;
+    ring-offset: 2px;
+    ring-color: #d1d5db;
+  }
+
+  .btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-base font-medium rounded-lg transition-all duration-300 border;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #000000;
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: #a7f3d0;
+    border-color: #86efac;
+  }
+
+  .btn-accent:hover {
+    background-color: #E8E8E7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-accent:focus {
+    outline: none;
+    ring: 2px;
+    ring-offset: 2px;
+    ring-color: #86efac;
+  }
+
+  .btn-accent:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 }
