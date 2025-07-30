@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Settings, Users, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Phone, Settings, Users, ArrowRight, ChevronLeft, ChevronRight, FileText } from 'lucide-react';
 
 interface SystemsCarouselProps {
   onBookingClick: () => void;
@@ -210,6 +210,17 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
                   <p className="text-lg text-gray-600">
                     {currentSystem.subtitle}
                   </p>
+                </div>
+                <div className="ml-auto">
+                  <a
+                    href={`/pdfs/${currentSystem.title.toLowerCase().replace(/\s+/g, '-')}.pdf`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-12 h-12 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all duration-300 group"
+                    title={`Download ${currentSystem.title} PDF`}
+                  >
+                    <FileText className="w-6 h-6 text-gray-600 group-hover:text-gray-800 group-hover:scale-110 transition-all duration-300" />
+                  </a>
                 </div>
               </div>
 
