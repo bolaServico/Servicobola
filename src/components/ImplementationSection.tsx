@@ -115,7 +115,7 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ isDarkMod
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               {/* Phase Card */}
-              <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl overflow-hidden hover:bg-gray-800/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 group">
+              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:bg-gray-50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 group">
                 {/* Image Container - Increased Size */}
                 <div className="relative h-80 overflow-hidden">
                   <img
@@ -123,12 +123,7 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ isDarkMod
                     alt={phase.phase}
                     className="w-full h-full object-contain p-6 group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 via-transparent to-transparent"></div>
-                  
-                  {/* Phase Number Badge */}
-                  <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                    {index + 1}
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent"></div>
                 </div>
 
                 {/* Content - Reduced Size */}
@@ -139,22 +134,22 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ isDarkMod
                       <phase.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                         {phase.phase}
                       </h3>
-                      <h4 className="text-lg font-semibold text-gray-300 group-hover:text-white transition-colors duration-300">
+                      <h4 className="text-lg font-semibold text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
                         {phase.title}
                       </h4>
                     </div>
                   </div>
 
                   {/* Duration Badge */}
-                  <div className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-blue-500/20 text-blue-300 border border-blue-500/30 mb-4">
+                  <div className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-600 border border-blue-200 mb-4">
                     {phase.duration}
                   </div>
                   
                   {/* Description */}
-                  <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                  <p className="text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
                     {phase.description}
                   </p>
                 </div>
