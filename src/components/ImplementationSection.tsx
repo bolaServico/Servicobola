@@ -157,22 +157,6 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ isDarkMod
                   <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
                     {phase.description}
                   </p>
-
-                  {/* Progress Bar */}
-                  <div className="mt-4 flex items-center space-x-2">
-                    <div className="flex-1 bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div 
-                        className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-1000 ease-out"
-                        style={{ 
-                          width: visiblePhases[index] ? '100%' : '0%',
-                          transitionDelay: `${index * 200 + 500}ms`
-                        }}
-                      />
-                    </div>
-                    <span className="text-sm text-blue-300 font-medium">
-                      Complete
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>

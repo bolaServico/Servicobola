@@ -158,20 +158,45 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
         <div className="text-center mb-8">
           <nav className="inline-flex items-center space-x-1 bg-white/10 backdrop-blur-sm rounded-full p-2">
             {menuItems.map((system) => (
-              <button
+              <div
                 key={system.id}
-                onClick={() => goToSlide(system.id - 1)}
-                className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeSystem === system.id
-                    ? 'bg-white text-black shadow-lg'
-                    : 'text-white hover:bg-white/20'
-                }`}
-                style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}
+                className="relative"
               >
-                {system.name}
-              </button>
+                <button
+                  onClick={() => goToSlide(system.id - 1)}
+                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                    activeSystem === system.id
+                      ? 'bg-white text-black shadow-lg'
+                      : 'text-white hover:bg-white/20'
+                  }`}
+                  style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}
+                >
+                  {system.name}
+                </button>
+                
+                {/* Progress Bar for Active System */}
+                {activeSystem === system.id && (
+                  <div className="absolute -bottom-1 left-2 right-2 h-1 bg-white/20 rounded-full overflow-hidden">
+                    <div 
+                      className="h-full bg-white rounded-full transition-all duration-300 ease-out"
+                      style={{ 
+                        width: isAutoPlaying ? '100%' : '0%',
+                        animation: isAutoPlaying ? 'progress 5s linear infinite' : 'none'
+                      }}
+                    />
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
+          
+          {/* Add CSS animation for progress bar */}
+          <style jsx>{`
+            @keyframes progress {
+              from { width: 0%; }
+              to { width: 100%; }
+            }
+          `}</style>
         </div>
 
         {/* Carousel Container */}
@@ -281,16 +306,6 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Progress Bar */}
-        <div className="mt-6 max-w-md mx-auto">
-          <div className="w-full bg-white/20 rounded-full h-1">
-            <div 
-              className={`h-1 bg-gradient-to-r ${currentSystem.color} rounded-full transition-all duration-700 ease-out`}
-              style={{ width: `${((currentSlide + 1) / systems.length) * 100}%` }}
-            />
           </div>
         </div>
 
