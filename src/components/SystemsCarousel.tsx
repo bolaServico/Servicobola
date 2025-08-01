@@ -241,13 +241,13 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
                     href={`/pdfs/${currentSystem.title.toLowerCase().replace(/\s+/g, '-')}.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-12 h-12 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all duration-300 group"
+                    className="inline-flex items-center justify-center w-20 h-20 bg-gray-100 hover:bg-gray-200 rounded-lg transition-all duration-300 group"
                     title={`Download ${currentSystem.title} PDF`}
                   >
                     <img 
                       src="/images/download.png" 
                       alt="Download PDF" 
-                      className="w-12 h-12 group-hover:scale-110 transition-all duration-300"
+                      className="w-20 h-20 group-hover:scale-110 transition-all duration-300"
                     />
                   </a>
                 </div>
