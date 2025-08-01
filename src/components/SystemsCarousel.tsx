@@ -247,7 +247,7 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
                     <img 
                       src="/images/download.png" 
                       alt="Download PDF" 
-                      className="w-6 h-6 group-hover:scale-110 transition-all duration-300"
+                      className="w-12 h-12 group-hover:scale-110 transition-all duration-300"
                     />
                   </a>
                 </div>
