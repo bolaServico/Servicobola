@@ -7,6 +7,7 @@ import SystemsCarousel from './components/SystemsCarousel';
 import SystemsSection from './components/SystemsSection';
 import WhyChooseSection from './components/WhyChooseSection';
 import ImplementationSection from './components/ImplementationSection';
+import AdHocServicesSection from './components/AdHocServicesSection';
 import FinalCTA from './components/FinalCTA';
 import CaseStudiesSection from './components/CaseStudiesSection';
 import FAQSection from './components/FAQSection';
@@ -46,6 +47,7 @@ function App() {
         activeSystem={activeSystem}
         onSystemChange={handleSystemChange}
       />
+      <AdHocServicesSection onBookingClick={handleBookingClick} isDarkMode={isDarkMode} />
       <WhyChooseSection isDarkMode={isDarkMode} />
       <ImplementationSection isDarkMode={isDarkMode} />
       <CaseStudiesSection isDarkMode={isDarkMode} />

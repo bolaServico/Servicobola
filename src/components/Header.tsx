@@ -27,6 +27,7 @@ const Header: React.FC<HeaderProps> = ({ onBookingClick, isDarkMode, activeSyste
         { name: 'Client Acquisition Engine', action: () => handleSystemClick(1) },
         { name: 'Operations Automation Hub', action: () => handleSystemClick(2) },
         { name: 'Client Success Platform', action: () => handleSystemClick(3) },
+        { name: 'Ad-hoc & Other AI Services', action: () => scrollToSection('adhoc-services-section') },
         { name: 'Implementation Process', action: () => scrollToSection('implementation-section') },
         { name: 'Why Choose Us', action: () => scrollToSection('why-choose-section') }
       ]
