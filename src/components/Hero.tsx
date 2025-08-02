@@ -8,14 +8,16 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onBookingClick, isDarkMode }) => {
   return (
-    <section className="pt-32 pb-12 relative overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/10 to-transparent"></div>
+    <section id="hero-section" className="pt-32 pb-12 relative overflow-hidden bg-black">
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-black to-gray-900/20"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
           Smart AI for law Firm, professional<br />
             <span className="relative text-white">
-              service providers
+              <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+                service providers
+              </span>
             </span>
           </h1>
           

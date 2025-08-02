@@ -9,45 +9,53 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ onBookingClick, isDarkMode, activeSystem, onSystemChange }) => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSystemClick = (systemId: number) => {
+    onSystemChange(systemId);
+    scrollToSection('systems-section');
+  };
   const menuItems = [
     {
       name: 'SERVICES',
       submenu: [
-        'Client Acquisition Engine',
-        'Operations Automation Hub', 
-        'Client Success Platform',
-        'Custom AI Solutions',
-        'Practice Management Integration'
+        { name: 'Client Acquisition Engine', action: () => handleSystemClick(1) },
+        { name: 'Operations Automation Hub', action: () => handleSystemClick(2) },
+        { name: 'Client Success Platform', action: () => handleSystemClick(3) },
+        { name: 'Implementation Process', action: () => scrollToSection('implementation-section') },
+        { name: 'Why Choose Us', action: () => scrollToSection('why-choose-section') }
       ]
     },
     {
-      name: 'ABOUT',
+      name: 'RESULTS',
       submenu: [
-        'Our Story',
-        'Team',
-        'Mission & Vision',
-        'Careers',
-        'Press & Media'
+        { name: 'Case Studies & ROI', action: () => scrollToSection('case-studies-section') },
+        { name: 'Industry Validation', action: () => scrollToSection('case-studies-section') },
+        { name: 'Client Success Stories', action: () => scrollToSection('case-studies-section') },
+        { name: 'Implementation Results', action: () => scrollToSection('implementation-section') }
       ]
     },
     {
-      name: 'BLOG',
+      name: 'RESOURCES',
       submenu: [
-        'AI in Professional Services',
-        'Case Studies',
-        'Industry Insights',
-        'Implementation Guides',
-        'ROI Analysis'
+        { name: 'FAQ', action: () => scrollToSection('faq-section') },
+        { name: 'System Proposals (PDF)', action: () => window.open('/pdfs/client-acquisition-engine.pdf', '_blank') },
+        { name: 'Implementation Guide', action: () => scrollToSection('implementation-section') },
+        { name: 'ROI Calculator', action: () => scrollToSection('case-studies-section') }
       ]
     },
     {
-      name: 'FAQS',
+      name: 'CONTACT',
       submenu: [
-        'Getting Started',
-        'Implementation',
-        'Pricing & ROI',
-        'Technical Support',
-        'Compliance & Security'
+        { name: 'Schedule Consultation', action: onBookingClick },
+        { name: 'FAQ', action: () => scrollToSection('faq-section') },
+        { name: 'Support Information', action: () => scrollToSection('footer-section') },
+        { name: 'Contact Details', action: () => scrollToSection('footer-section') }
       ]
     }
   ];
@@ -75,13 +83,13 @@ const Header: React.FC<HeaderProps> = ({ onBookingClick, isDarkMode, activeSyste
                   <div className="absolute top-full left-0 mt-2 w-64 bg-black border border-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div className="py-2">
                       {item.submenu.map((subItem, subIndex) => (
-                        <a
+                        <button
                           key={subIndex}
-                          href="#"
-                          className="block px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition-colors duration-200"
+                          onClick={subItem.action}
+                          className="block w-full text-left px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-gray-900 transition-colors duration-200"
                         >
-                          {subItem}
-                        </a>
+                          {subItem.name}
+                        </button>
                       ))}
                     </div>
                   </div>

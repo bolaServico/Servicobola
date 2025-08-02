@@ -43,7 +43,28 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ isDarkMode }) => {
   ];
 
   return (
-    <section className="py-12 bg-black">
+    <section id="why-choose-section" className="py-12 bg-black relative overflow-hidden">
+      {/* Dark theme background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-gray-900/10 via-black to-gray-800/10"></div>
+        
+        {/* Subtle floating elements */}
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-white/5 blur-xl animate-pulse"
+            style={{
+              width: `${60 + Math.random() * 100}px`,
+              height: `${60 + Math.random() * 100}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`
+            }}
+          />
+        ))}
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
@@ -53,44 +74,28 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ isDarkMode }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {reasons.map((reason, index) => (
-            <div key={index} className={`p-8 rounded-xl transition-all duration-500 hover:shadow-lg hover:scale-105 group ${
-              isDarkMode 
-                ? `bg-white hover:bg-gray-50 border-2 ${
-                    highlightOrder[highlightedIndex] === index 
-                      ? 'border-purple-500 shadow-lg shadow-purple-500/25 scale-105' 
-                      : 'border-gray-200 hover:border-purple-500/50'
-                  }` 
-                : `bg-white hover:shadow-xl border-2 ${
-                    highlightOrder[highlightedIndex] === index 
-                      ? 'border-red-500 shadow-lg shadow-red-500/25 scale-105' 
-                      : 'border-gray-200'
-                  }`
+            <div key={index} className={`p-8 rounded-xl transition-all duration-500 hover:shadow-lg hover:scale-105 group bg-gray-900 border-2 ${
+              highlightOrder[highlightedIndex] === index 
+                ? 'border-white/30 shadow-lg shadow-white/10 scale-105 bg-gray-800' 
+                : 'border-gray-800 hover:border-gray-700 hover:bg-gray-800'
             }`}>
               <div className="flex items-start space-x-4">
                 <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-500 ${
-                  isDarkMode 
-                    ? `${
-                        highlightOrder[highlightedIndex] === index 
-                          ? 'bg-gradient-to-br from-purple-500 to-blue-500 shadow-lg' 
-                          : 'bg-gradient-to-br from-purple-600 to-blue-600 group-hover:from-purple-500 group-hover:to-blue-500'
-                      }` 
-                    : `${
-                        highlightOrder[highlightedIndex] === index 
-                          ? 'bg-red-200 shadow-lg' 
-                          : 'bg-red-100 group-hover:bg-red-200'
-                      }`
+                  highlightOrder[highlightedIndex] === index 
+                    ? 'bg-white shadow-lg' 
+                    : 'bg-gray-800 border border-gray-700 group-hover:bg-gray-700'
                 }`}>
                   <reason.icon className={`w-6 h-6 transition-all duration-500 ${
-                    isDarkMode ? 'text-white' : 'text-red-600'
+                    highlightOrder[highlightedIndex] === index ? 'text-black' : 'text-white'
                   } ${
                     highlightOrder[highlightedIndex] === index ? 'scale-110' : ''
                   }`} />
                 </div>
                 <div>
-                  <h3 className={`text-xl font-semibold mb-3 text-black transition-all duration-500 ${
-                    highlightOrder[highlightedIndex] === index ? 'text-purple-700' : ''
+                  <h3 className={`text-xl font-semibold mb-3 text-white transition-all duration-500 ${
+                    highlightOrder[highlightedIndex] === index ? 'text-white' : ''
                   }`}>{reason.title}</h3>
-                  <p className="leading-relaxed text-black">{reason.description}</p>
+                  <p className="leading-relaxed text-gray-300 group-hover:text-gray-200">{reason.description}</p>
                 </div>
               </div>
             </div>
