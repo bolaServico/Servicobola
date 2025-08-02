@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowRight, FileText, MessageSquare, BarChart3, Star, Home, CheckCircle, Calendar } from 'lucide-react';
+import { ArrowRight, FileText, MessageSquare, BarChart3, Star, Home, CheckCircle, Calendar, Phone, Bot, Users, DollarSign, Clock, Shield, Search, Mail, TrendingUp, Briefcase, Globe, Database } from 'lucide-react';
 
 interface AdHocServicesSectionProps {
   onBookingClick: () => void;
@@ -13,44 +13,148 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
 
   const tiers = [
     {
-      name: "Essential Workflows",
-      description: "Core AI-powered workflows designed to streamline your most critical professional service tasks. These foundational tools integrate seamlessly with your existing practice management systems.",
-      image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400",
-      services: ["Redline Issues List", "Analyze Transcripts", "Compare Agreements"]
+      name: "Must-Have Solutions",
+      subtitle: "Immediate ROI",
+      description: "Essential AI tools that deliver immediate return on investment and solve critical operational challenges. These foundational systems pay for themselves within days and form the backbone of an efficient practice.",
+      image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
+      services: [
+        {
+          name: "AI Voice Receptionist",
+          priority: "Must-Need",
+          roi: "Immediate",
+          description: "24/7 professional phone answering that screens clients, schedules appointments, and transfers qualified calls. Replaces expensive receptionist costs while never missing leads.",
+          icon: Phone
+        },
+        {
+          name: "Lead Qualification Chatbot",
+          priority: "Must-Need",
+          roi: "High",
+          description: "Website chatbot that engages visitors instantly, qualifies leads by practice area and budget, and books consultations automatically. Captures leads that would otherwise leave your site.",
+          icon: Bot
+        },
+        {
+          name: "Client Intake Automation",
+          priority: "Must-Need",
+          roi: "9-Day Payback",
+          description: "Automated new client onboarding with document collection, conflict checks, and welcome sequences. Reduces 4-hour manual process to 15 minutes.",
+          icon: Users
+        },
+        {
+          name: "Invoice & Billing Automation",
+          priority: "Must-Need",
+          roi: "Immediate",
+          description: "Automated time tracking, invoice generation, and payment processing. Eliminates administrative overhead and improves cash flow with faster billing cycles.",
+          icon: DollarSign
+        },
+        {
+          name: "Appointment Scheduling & Reminders",
+          priority: "Must-Need",
+          roi: "High",
+          description: "Smart calendar management with automated booking, confirmations, and rescheduling. Reduces no-shows by 60% and eliminates scheduling conflicts.",
+          icon: Clock
+        }
+      ]
     },
     {
-      name: "Advanced Analytics",
-      description: "Sophisticated AI analysis tools that provide deep insights into your practice operations, client interactions, and business performance metrics for data-driven decision making.",
-      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=400",
-      services: ["Deal Points", "Lease Extraction", "Reps & Warranties"]
+      name: "High-Impact Solutions",
+      subtitle: "Strategic Advantage",
+      description: "Advanced AI systems that provide significant competitive advantages and operational improvements. These tools transform how you deliver services and interact with clients, setting your practice apart from competitors.",
+      image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
+      services: [
+        {
+          name: "Document Review & Analysis",
+          priority: "Innovative",
+          roi: "87% Time Savings",
+          description: "AI-powered contract review, legal brief analysis, and document summarization. Provides 100x productivity gains for high-volume document work.",
+          icon: FileText
+        },
+        {
+          name: "Legal Research Assistant",
+          priority: "Innovative",
+          roi: "High",
+          description: "Automated legal research with case law citations, statute analysis, and brief integration. Reduces research time from hours to minutes.",
+          icon: Search
+        },
+        {
+          name: "Client Communication Automation",
+          priority: "Must-Need",
+          roi: "High",
+          description: "Automated case updates, progress reports, and follow-up sequences. Improves client satisfaction while reducing communication workload by 70%.",
+          icon: MessageSquare
+        },
+        {
+          name: "Compliance & Deadline Tracking",
+          priority: "Must-Need",
+          roi: "Risk Mitigation",
+          description: "Automated monitoring of court dates, filing deadlines, and regulatory requirements with escalation alerts. Prevents malpractice claims and missed deadlines.",
+          icon: Shield
+        },
+        {
+          name: "Email Marketing & Client Retention",
+          priority: "High ROI",
+          roi: "300% Referral Increase",
+          description: "Automated email campaigns, client satisfaction surveys, and referral request workflows. Generates consistent new business from existing clients.",
+          icon: Mail
+        }
+      ]
     },
     {
-      name: "Custom Solutions",
-      description: "Tailored AI implementations designed specifically for your unique practice requirements, industry regulations, and specialized workflows that standard solutions cannot address.",
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
-      services: ["Custom Workflows", "Industry-Specific Tools", "Compliance Automation"]
+      name: "Competitive Advantage Solutions",
+      subtitle: "Premium Differentiation",
+      description: "Cutting-edge AI capabilities that position your practice as an industry leader. These sophisticated tools enable premium service delivery and unlock new revenue opportunities that competitors cannot match.",
+      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+      services: [
+        {
+          name: "Case Outcome Prediction",
+          priority: "Innovative",
+          roi: "Strategic",
+          description: "AI analysis of case data to predict litigation outcomes and settlement ranges. Improves case strategy and client counseling with data-driven insights.",
+          icon: TrendingUp
+        },
+        {
+          name: "Social Media & Content Automation",
+          priority: "Low Cost/High Return",
+          roi: "Marketing Efficiency",
+          description: "Automated LinkedIn posting, content creation, and thought leadership articles. Builds firm reputation and generates leads with minimal effort.",
+          icon: Globe
+        },
+        {
+          name: "Due Diligence Automation",
+          priority: "Innovative",
+          roi: "Premium Pricing",
+          description: "AI-powered document review for M&A transactions and corporate deals. Enables handling larger transactions with existing staff.",
+          icon: Briefcase
+        },
+        {
+          name: "Client Portal Assistant",
+          priority: "Must-Need",
+          roi: "Service Quality",
+          description: "AI chatbot in client portals that answers questions, helps navigate documents, and provides case status updates. Improves client experience while reducing support calls.",
+          icon: Database
+        }
+      ]
     }
   ];
 
   const allServices = [
-    { name: "Redline Issues List", icon: FileText },
-    { name: "Analyze Transcripts", icon: MessageSquare },
-    { name: "Compare Agreements", icon: BarChart3 },
-    { name: "Deal Points", icon: Star },
-    { name: "Lease Extraction", icon: Home },
-    { name: "Reps & Warranties", icon: CheckCircle },
-    { name: "Custom Workflows", icon: FileText },
-    { name: "Industry-Specific Tools", icon: Star },
-    { name: "Compliance Automation", icon: CheckCircle },
-    { name: "Document Analysis", icon: FileText },
-    { name: "Contract Review", icon: MessageSquare },
-    { name: "Risk Assessment", icon: BarChart3 },
-    { name: "Due Diligence", icon: Star },
-    { name: "Regulatory Compliance", icon: Home },
-    { name: "Performance Metrics", icon: CheckCircle },
-    { name: "Client Reporting", icon: FileText },
-    { name: "Workflow Optimization", icon: MessageSquare },
-    { name: "Process Automation", icon: BarChart3 }
+    { name: "AI Voice Receptionist", icon: Phone },
+    { name: "Lead Qualification Chatbot", icon: Bot },
+    { name: "Client Intake Automation", icon: Users },
+    { name: "Invoice & Billing Automation", icon: DollarSign },
+    { name: "Appointment Scheduling", icon: Clock },
+    { name: "Document Review & Analysis", icon: FileText },
+    { name: "Legal Research Assistant", icon: Search },
+    { name: "Client Communication", icon: MessageSquare },
+    { name: "Compliance & Deadline Tracking", icon: Shield },
+    { name: "Email Marketing & Retention", icon: Mail },
+    { name: "Case Outcome Prediction", icon: TrendingUp },
+    { name: "Social Media Automation", icon: Globe },
+    { name: "Due Diligence Automation", icon: Briefcase },
+    { name: "Client Portal Assistant", icon: Database },
+    { name: "Contract Analysis", icon: FileText },
+    { name: "Time Tracking", icon: Clock },
+    { name: "Client Screening", icon: Users },
+    { name: "Payment Processing", icon: DollarSign }
   ];
 
   // Intersection Observer for staggered animations
@@ -86,7 +190,7 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedTier((prev) => (prev + 1) % tiers.length);
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -99,6 +203,16 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
 
   const getAnimationDirection = (rowIndex: number) => {
     return rowIndex % 2 === 0 ? 'animate-scroll-right' : 'animate-scroll-left';
+  };
+
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
+      case 'Must-Need': return 'bg-red-100 text-red-800';
+      case 'Innovative': return 'bg-blue-100 text-blue-800';
+      case 'High ROI': return 'bg-green-100 text-green-800';
+      case 'Low Cost/High Return': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
   };
 
   return (
@@ -130,7 +244,7 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
           <div className="inline-flex items-center space-x-4 mb-6">
             <div className="h-px bg-gradient-to-r from-transparent via-white/40 to-transparent flex-1"></div>
             <div className="px-4 py-2 bg-white/10 border border-white/20 rounded-full">
-              <span className="text-white text-sm font-medium">Ad-hoc & Other AI Services</span>
+              <span className="text-white text-sm font-medium">Workflows</span>
             </div>
             <div className="h-px bg-gradient-to-r from-transparent via-white/40 to-transparent flex-1"></div>
           </div>
@@ -145,11 +259,11 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
           </p>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* Main Content Grid - Equal Height Sections */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Left Section - Tier Details */}
-          <div className="space-y-8">
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800">
+          <div className="h-full">
+            <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800 h-full flex flex-col">
               {/* Tier Navigation */}
               <div className="flex space-x-2 mb-8">
                 {tiers.map((_, index) => (
@@ -168,7 +282,7 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
               </div>
 
               {/* Selected Tier Content */}
-              <div className="space-y-6">
+              <div className="space-y-6 flex-1 flex flex-col">
                 {/* Tier Image */}
                 <div className="relative h-48 rounded-2xl overflow-hidden">
                   <img
@@ -178,39 +292,56 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-2xl font-bold text-white mb-2">
+                    <h3 className="text-2xl font-bold text-white mb-1">
                       {tiers[selectedTier].name}
                     </h3>
+                    <p className="text-gray-200 text-sm">
+                      {tiers[selectedTier].subtitle}
+                    </p>
                   </div>
                 </div>
 
                 {/* Tier Description */}
-                <div className="space-y-4">
+                <div className="space-y-4 flex-1">
                   <p className="text-gray-300 leading-relaxed">
                     {tiers[selectedTier].description}
                   </p>
 
-                  {/* Tier Services */}
+                  {/* Featured Services */}
                   <div className="space-y-3">
-                    <h4 className="text-white font-semibold">Key Services:</h4>
-                    <ul className="space-y-2">
-                      {tiers[selectedTier].services.map((service, index) => (
-                        <li key={index} className="flex items-center space-x-3">
-                          <ArrowRight className="w-4 h-4 text-white flex-shrink-0" />
-                          <span className="text-gray-300">{service}</span>
-                        </li>
+                    <h4 className="text-white font-semibold">Featured Services:</h4>
+                    <div className="space-y-3 max-h-64 overflow-y-auto">
+                      {tiers[selectedTier].services.slice(0, 3).map((service, index) => (
+                        <div key={index} className="bg-gray-800/50 rounded-lg p-4">
+                          <div className="flex items-start space-x-3">
+                            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
+                              <service.icon className="w-4 h-4 text-black" />
+                            </div>
+                            <div className="flex-1">
+                              <div className="flex items-center space-x-2 mb-2">
+                                <h5 className="text-white font-medium text-sm">{service.name}</h5>
+                                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(service.priority)}`}>
+                                  {service.roi}
+                                </span>
+                              </div>
+                              <p className="text-gray-400 text-xs leading-relaxed">
+                                {service.description.substring(0, 120)}...
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </div>
 
                 {/* CTA Button */}
                 <button
                   onClick={onBookingClick}
-                  className="w-full btn-primary group mt-6"
+                  className="w-full btn-primary group mt-auto"
                 >
                   <Calendar className="w-5 h-5 mr-2" />
-                  Discuss Custom Requirements
+                  Discuss {tiers[selectedTier].name}
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -218,10 +349,10 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
           </div>
 
           {/* Right Section - Scrolling Services */}
-          <div className="space-y-6">
-            <div className="bg-gray-200 rounded-3xl p-8 relative overflow-hidden">
+          <div className="h-full">
+            <div className="bg-gray-200 rounded-3xl p-8 relative overflow-hidden h-full flex flex-col">
               {/* Service Rows */}
-              <div className="space-y-6">
+              <div className="space-y-6 flex-1 flex flex-col justify-center">
                 {[0, 1, 2].map((rowIndex) => (
                   <div key={rowIndex} className="relative">
                     <div className={`flex space-x-4 ${getAnimationDirection(rowIndex)}`}>
@@ -271,17 +402,17 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
         <div className="text-center mt-16">
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Need Something Custom?
+              Ready to Transform Your Practice?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our AI specialists can develop bespoke solutions tailored to your specific practice requirements and industry regulations.
+              Our AI specialists will help you identify which tier of solutions provides the best ROI for your specific practice requirements and growth objectives.
             </p>
             <button
               onClick={onBookingClick}
               className="btn-primary group"
             >
               <Calendar className="w-5 h-5 mr-2" />
-              Schedule Custom Solution Consultation
+              Schedule Custom Solution Assessment
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
