@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({ onBookingClick, isDarkMode }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
-          Smart AI for law Firm, professional<br />
+          Smart AI for law Firms, professional<br />
             <span className="relative text-white">
               <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
                 service providers
