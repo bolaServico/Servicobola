@@ -119,9 +119,6 @@ const Footer = () => {
                 <h3 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
                   Serviqo
                 </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Transforming Professional Services Through AI Innovation
-                </p>
                 
                 {/* Contact Information */}
                 <div className="space-y-4">
