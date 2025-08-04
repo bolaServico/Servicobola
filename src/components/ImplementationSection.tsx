@@ -149,7 +149,7 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ isDarkMod
                   </div>
                   
                   {/* Description */}
-                  <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300">
+                  <p className="text-gray-300 leading-relaxed group-hover:text-white transition-colors duration-300" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
                     {phase.description}
                   </p>
                 </div>
@@ -182,15 +182,15 @@ const ImplementationSection: React.FC<ImplementationSectionProps> = ({ isDarkMod
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white mb-2">389%</div>
-                  <div className="text-gray-400 text-sm">ROI Achievement</div>
+                  <div className="text-gray-400 text-sm" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>ROI Achievement</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white mb-2">9 Days</div>
-                  <div className="text-gray-400 text-sm">Payback Period</div>
+                  <div className="text-gray-400 text-sm" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>Payback Period</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-white mb-2">60%</div>
-                  <div className="text-gray-400 text-sm">Time Reduction</div>
+                  <div className="text-gray-400 text-sm" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>Time Reduction</div>
                 </div>
               </div>
             </div>

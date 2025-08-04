@@ -95,7 +95,7 @@ const WhyChooseSection: React.FC<WhyChooseSectionProps> = ({ isDarkMode }) => {
                   <h3 className={`text-xl font-semibold mb-3 text-white transition-all duration-500 ${
                     highlightOrder[highlightedIndex] === index ? 'text-white' : ''
                   }`}>{reason.title}</h3>
-                  <p className="leading-relaxed text-gray-300 group-hover:text-gray-200">{reason.description}</p>
+                  <p className="leading-relaxed text-gray-300 group-hover:text-gray-200" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>{reason.description}</p>
                 </div>
               </div>
             </div>

@@ -244,7 +244,7 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
                     {currentSystem.features.map((feature, index) => (
                       <li key={index} className="flex items-start group">
                         <ArrowRight className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-gray-400 group-hover:text-gray-200 transition-colors" />
-                        <span className="text-gray-300 group-hover:text-white transition-colors">
+                        <span className="text-gray-300 group-hover:text-white transition-colors" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
                           {feature}
                         </span>
                       </li>
@@ -262,7 +262,7 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
                     {currentSystem.results.map((result, index) => (
                       <li key={index} className="flex items-start group">
                         <ArrowRight className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-gray-400 group-hover:text-gray-200 transition-colors" />
-                        <span className="text-gray-300 group-hover:text-white transition-colors font-medium">
+                        <span className="text-gray-300 group-hover:text-white transition-colors font-medium" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
                           {result}
                         </span>
                       </li>
@@ -280,7 +280,7 @@ const SystemsCarousel: React.FC<SystemsCarouselProps> = ({ onBookingClick, isDar
                     {currentSystem.advantages.map((advantage, index) => (
                       <li key={index} className="flex items-start group">
                         <ArrowRight className="w-4 h-4 mr-3 mt-1 flex-shrink-0 text-gray-400 group-hover:text-gray-200 transition-colors" />
-                        <span className="text-gray-300 group-hover:text-white transition-colors">
+                        <span className="text-gray-300 group-hover:text-white transition-colors" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
                           {advantage}
                         </span>
                       </li>

@@ -37,15 +37,15 @@ const Hero: React.FC<HeroProps> = ({ onBookingClick, isDarkMode }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
             <div className="text-center">
               <div className="text-3xl font-bold mb-2 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>60s</div>
-              <div className="text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>Lead Response Time</div>
+              <div className="text-white transition-colors duration-300" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>Lead Response Time</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>200-400%</div>
-              <div className="text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>Conversion Improvement</div>
+              <div className="text-white transition-colors duration-300" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>Conversion Improvement</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold mb-2 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>$50K-150K</div>
-              <div className="text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>Additional Annual Revenue</div>
+              <div className="text-white transition-colors duration-300" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>Additional Annual Revenue</div>
             </div>
           </div>
         </div>

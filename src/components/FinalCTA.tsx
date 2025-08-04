@@ -17,7 +17,7 @@ const FinalCTA: React.FC<FinalCTAProps> = ({ onBookingClick, isDarkMode }) => {
           97% of business leaders plan to increase GenAI investments, with 43% expecting to spend over $100 million. 
           Don't let competitors gain the advantage.
         </p>
-        <p className="text-lg mb-8 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
+        <p className="text-lg mb-8 text-white transition-colors duration-300" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
           Get your custom transformation roadmap and investment analysis:
         </p>
         

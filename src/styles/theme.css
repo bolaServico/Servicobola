@@ -76,7 +76,7 @@ html {
 body {
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* Utility classes for theme-aware components */

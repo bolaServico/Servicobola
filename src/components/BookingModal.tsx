@@ -39,7 +39,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose, bookingLin
               <h3 className="text-2xl leading-6 font-bold mb-4 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
                 Schedule Your AI Strategy Session
               </h3>
-              <p className="mb-6 text-white transition-colors duration-300" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
+              <p className="mb-6 text-white transition-colors duration-300" style={{ fontFamily: "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" }}>
                 Book a complimentary 30-minute consultation to discuss your practice's AI transformation roadmap.
               </p>
               
