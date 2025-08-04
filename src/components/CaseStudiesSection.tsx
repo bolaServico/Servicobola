@@ -19,7 +19,7 @@ const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({ isDarkMode }) =
       result: "21x higher conversion rates",
       metric: "2,100%",
       description: "Professional services firms responding to leads within 60 seconds achieve 21x higher conversion rates compared to 30-minute response times.",
-      link: "https://www.insidesales.com/insider/lead-response/",
+      link: "https://cdn2.hubspot.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf",
       source: "MIT & InsideSales.com Study",
       image: "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800",
       gradient: "from-blue-500 to-cyan-500",

@@ -336,14 +336,6 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
                 </div>
 
                 {/* CTA Button */}
-                <button
-                  onClick={onBookingClick}
-                  className="w-full btn-primary group mt-auto"
-                >
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Discuss {tiers[selectedTier].name}
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
               </div>
             </div>
           </div>
@@ -385,38 +377,11 @@ const AdHocServicesSection: React.FC<AdHocServicesSectionProps> = ({ onBookingCl
               </div>
 
               {/* Explore Button */}
-              <div className="text-center mt-8">
-                <button
-                  onClick={onBookingClick}
-                  className="inline-flex items-center text-gray-600 hover:text-black transition-colors group"
-                >
-                  <span className="font-medium">Explore Workflows</span>
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-800">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Practice?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our AI specialists will help you identify which tier of solutions provides the best ROI for your specific practice requirements and growth objectives.
-            </p>
-            <button
-              onClick={onBookingClick}
-              className="btn-primary group"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Custom Solution Assessment
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* CSS Animations */}
